@@ -7,6 +7,7 @@ const FoodSearchTab = (props) => {
   const { handleSearchBy } = props;
   const [alignment, setAlignment] = React.useState("s");
 
+  //   function to set search by option
   const handleChange = (
     event: React.MouseEvent<HTMLElement>,
     newAlignment: string

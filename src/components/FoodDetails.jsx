@@ -23,11 +23,12 @@ const Transition = React.forwardRef(function Transition(
 const FoodDetails = (props) => {
   const { selectedFood, changeopenDetails } = props;
   const [open, setOpen] = React.useState(true);
-
+  // function for closing details slide
   const handleClose = () => {
     setOpen(false);
     changeopenDetails();
   };
+  // function to create embed url for given youtube link
   const getYTUrl = () => {
     console.log(selectedFood.strYoutube);
     var url = new URL(selectedFood.strYoutube);

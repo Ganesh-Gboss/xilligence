@@ -11,6 +11,7 @@ const FoodItem = (props) => {
   const [openDetails, setOpenDetails] = React.useState(false);
   const [selectedFood, setSelectedFood] = useState([]);
   const changeopenDetails = () => setOpenDetails(!openDetails);
+  //   Function to open Food Details page
   const handleClickOpen = () => {
     changeopenDetails();
     console.log(itemDetails);

@@ -17,6 +17,7 @@ const Food = () => {
   const [foodList, setFoodList] = useState(null);
   const [loader, setLoader] = useState(false);
   const [searchUrl, setSearchUrl] = useState(API_URL[0].SEARCH_S);
+  //   Function for search functionality it calls once user press enter key after entering serch value
   const handleSearch = (e) => {
     if (e.code === "Enter") {
       if (e.target.value.trim() === "") {
@@ -25,6 +26,7 @@ const Food = () => {
       setsearchValue(e.target.value.trim());
     }
   };
+  //   Function for change mode between search by name and search by ingredients
   const handleSearchBy = (type) => {
     if (type === "s") {
       setSearchUrl(API_URL[0].SEARCH_S);
@@ -32,6 +34,7 @@ const Food = () => {
       setSearchUrl(API_URL[0].SEARCH_I);
     }
   };
+  // this useEffect triggers the serch api once serch value changes
   useEffect(() => {
     if (searchValue !== null && searchValue !== "") {
       setLoader(true);
